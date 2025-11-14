@@ -22,17 +22,15 @@ public class Relatorio {
     }
     
     public void imprimir() {
+        FormatadorRelatorio fr = new FormatadorRelatorio();
         // Formatação do título
-        String tituloFormatado = "=== " + titulo.toUpperCase() + " ===";
-        System.out.println(tituloFormatado);
+        fr.formatarTitulo(this.titulo);
         
         // Formatação do conteúdo
-        String conteudoFormatado = "  " + conteudo.replace("\n", "\n  ");
-        System.out.println(conteudoFormatado);
+        fr.formatarConteudo(this.conteudo)
         
         // Formatação do rodapé
-        String rodapeFormatado = "--- " + rodape + " ---";
-        System.out.println(rodapeFormatado);
+        fr.formatarRodape(this.rodape);
     }
     
     public double calcularTotal(double[] valores) {
