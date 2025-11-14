@@ -12,7 +12,8 @@ package extracaodevariaveis;
 public class CalculadoraPreco {
     
     public double calcularPrecoFinal(double precoBase, int quantidade, double taxaImposto) {
-        return precoBase * quantidade * (1 + taxaImposto) - (precoBase * quantidade * 0.1) + 5.0;
+        double subtotal = precoBase * quantidade;
+        return subtotal * (1 + taxaImposto) - (subtotal * 0.1) + 5.0;
     }
     
     public boolean podeAplicarDesconto(double preco, int quantidade, boolean clienteVIP) {

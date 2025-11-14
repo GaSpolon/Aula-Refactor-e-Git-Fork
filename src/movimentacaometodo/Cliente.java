@@ -24,11 +24,11 @@ public class Cliente {
     }
 
     // Este método deveria estar na classe Pedido
-    public double calcularDesconto() {
-        if (pedido.getValorTotal() > 1000) {
-            return pedido.getValorTotal() * 0.10;
-        } else if (pedido.getValorTotal() > 500) {
-            return pedido.getValorTotal() * 0.05;
+    public static double calcularDesconto(movimentacaometodo.Cliente cliente) {
+        if (cliente.pedido.getValorTotal() > 1000) {
+            return cliente.pedido.getValorTotal() * 0.10;
+        } else if (cliente.pedido.getValorTotal() > 500) {
+            return cliente.pedido.getValorTotal() * 0.05;
         }
         return 0;
     }
