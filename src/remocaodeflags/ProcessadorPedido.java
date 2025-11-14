@@ -25,4 +25,3 @@ public class ProcessadorPedido {
         pedido.setValor(valor);
     }
 }
-
